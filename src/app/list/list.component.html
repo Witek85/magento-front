@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-4">
+        <div *ngFor="let person of persons | async">
+            <p>{{ person.id }}, {{ person.name }}</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div *ngFor="let personId of personIds | async">
+            <p>{{ personId.id }}</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div *ngFor="let country of countries | async">
+            <p>{{ country.full_name_english }} - {{ country.full_name_locale }}</p>
+        </div>
+    </div>
+</div>
